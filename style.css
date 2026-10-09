@@ -1,0 +1,172 @@
+:root {
+    --beige-color: #fdf4e2;
+    --orange-color: #DA661A;
+    --pink-color: #DA6A57;
+    --green-color: #343d25;
+    --brown-color: #592d10;
+    --heading-font: 'Buenard', serif;
+}
+
+    body {
+        font-family: -apple-system, var(--heading-font), "Segoe UI", Roboto, 
+        Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: var(--green-color);
+        background-color: var(--beige-color);
+
+    }
+
+    header {
+        padding: 1rem 10%;
+        text-align: center;
+        color: var(--green-color);
+        h1 {
+            letter-spacing: 4px;
+            font-size: 3.2rem;
+        }
+        h2 {
+            font-size: 2rem;
+            padding: 1rem 5%;
+        }
+        h3 {
+            text-align: left;
+        }
+    }
+
+    main {
+        max-width: 1000px;
+        margin: auto;
+        p {
+            font-size: 1.25rem
+        }
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+
+    h1, h2, h3 {
+        color: var(--green-color);
+    }
+
+    .accent {
+        color: var(--brown-color); 
+    }
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    gap: 102px; 
+    margin-top: 32px; 
+}
+
+.btn {
+    padding: 4px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 6px; 
+}
+
+.btn.primary {
+    background-color: var(--pink-color);
+    color: var(--beige-color); 
+    border: 2px solid var(--pink-color);
+}
+
+/* Circular Icon Styling */
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* This forces a perfect square into a circle */
+    border: 2px solid var(--beige-color);
+    color: var(--beige-color);
+    transition: all 0.3s ease; /* Smooth animation when hovering */
+}
+
+/* Hover Effect: Inverts the colors so the circle fills with beige and the icon turns green */
+.icon-circle:hover {
+    background-color: var(--beige-color);
+    color: var(--green-color);
+    transform: translateY(-3px); /* Makes the button subtly pop up when hovered */
+}
+
+.split-layout {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 64px; 
+    width: 100%;
+}
+
+.text-box, .photo-box {
+    flex: 1;
+    margin: 20px;
+}
+
+.photo-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+
+.photo-small img {
+    max-width: 70%; 
+}
+
+@media (max-width: 768px) {
+    .split-layout {
+        flex-direction: column; 
+    }
+}
+
+.divider-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: px 0; 
+    width: 100%;
+}
+
+.line {
+    flex: 1; 
+    height: 4px;
+    background-color: var(--pink-color); 
+}
+
+footer {
+    display: flex;
+    justify-content: space-between; /* Pushes text left, icons right */
+    align-items: center; /* Vertically centers the icons with the text */
+    padding: 60px 5%;
+    margin-top: 80px;
+    background-color: var(--green-color); 
+    color: var(--beige-color); 
+    text-align: left; /* Aligns the paragraph text nicely on the left */
+}
+
+footer h2 {
+    color: var(--beige-color);
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 24px;
+    /* Removed the top margin since they are now side-by-side with the text */
+}
+
+/* Mobile Responsiveness: Stacks the footer cleanly on phones */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
+}
