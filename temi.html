@@ -11,12 +11,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
     <header>
-        <h2>Interface Redesign</h2>        
-        <div class="button-container">
-            <a href="javascript:history.back()" class="btn primary">Back</a>
-        </div>
+        <h2>Interface Redesign</h2>
     </header>
+  
+    <main>
+            <div class="text-box">
+                <h2>HRI Lab Interface Redesign</h2>
+                <p><strong>Role:</strong> Research Assistant (UI/UX & Front-End Lead)</p>
+                <p><strong>Timeline:</strong> June 2025 (2-week sprint)</p>
+                <p>While working as a lab assistant in human-robot interaction (HRI) experiments, I noticed the robot's interface could be improved to increase participant comfort. I volunteered to redesign and develop the HTML-based face animations and UI screens for the Temi robot to create a more approachable, intuitive, and less cognitively demanding experience.</p>        </div>
+            <div class="photo-box">
+                <img src="TemiGoalsAfter.png" alt="Final Temi Interface">
+            </div>
+        </div>
+
+        <div class="divider-container">
+            <div class="line"></div>
+            <span class="btn secondary" style="cursor: default; border: none;">ITERATIONS & SOLUTIONS</span>
+            <div class="line"></div>
+        </div>
+
+        <div class="split-layout">
+            <div class="photo-box">
+                <img src="TemiFaceBefore.png" alt="Before of Temi's Face">
+                <img src="TemiFaceAfter.png" alt="After of Temi's Face">
+            </div>
+            <div class="text-box">
+                <h2>Anthropomorphic Refinements</h2>
+                <p>To make Temi appear friendlier and more approachable, I increased the scale of the eyes on the face screen. I also completely reworked the CSS blinking animation, slowing it down to mimic a more natural, fluid human blink rather than a robotic flicker.</p>
+            </div>
+        </div>
+
+        <div class="split-layout">
+            <div class="text-box">
+                <h2>Reducing Cognitive Load</h2>
+                <p>The original Smart Goals screen suffered from low contrast and visual clutter. I implemented a darker background to build high contrast, clearly separating the background entity from Temi's own color palette. By centering Temi alongside the goals, the visual hierarchy clearly establishes that Temi is the one explaining the concepts.</p>
+                <p>Applying cognitive science principles, I removed excess text from the screen and utilized a cleaner, more scholarly font. This forces participants to glance at the acronym and then actively listen to Temi's explanations, rather than getting distracted by reading heavy blocks of text.</p>
+            </div>
+            <div class="photo-box">
+                <img src="TemiGoalsBefore.png" alt="Before of the Smart Goals Screen">
+                <img src="TemiGoalsAfter.png" alt="After of the Smart Goals Screen">
+            </div>
+        </div>
+
+        <div class="button-container" style="margin-top: 50px; margin-bottom: 50px">
+                <a href="javascript:history.back()" class="btn primary">Back</a>
+        </div>
+    </main>
 </body>

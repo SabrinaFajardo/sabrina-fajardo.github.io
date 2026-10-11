@@ -1,9 +1,9 @@
 :root {
     --beige-color: #fdf4e2;
     --orange-color: #DA661A;
-    --pink-color: #DA6A57;
+    --pink-color: #e26c59;
     --green-color: #343d25;
-    --brown-color: #592d10;
+    --brown-color: #7e3b0f;
     --heading-font: 'Buenard', serif;
 }
 
@@ -30,6 +30,8 @@
         h2 {
             font-size: 2rem;
             padding: 0.5rem 5%;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
             /*font-weight: normal;*/
         }
         h3 {
@@ -113,7 +115,6 @@
     margin: 0;
 }
 
-
 .photo-box {
     flex: 1;
     margin: 0;
@@ -149,14 +150,14 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    margin: 20px 0; 
+    margin: 40px 0; 
     width: 100%;
 }
 
 .line {
     flex: 1; 
     height: 4px;
-    background-color: var(--pink-color); 
+    background-color: var(--brown-color); 
 }
 
 footer {
