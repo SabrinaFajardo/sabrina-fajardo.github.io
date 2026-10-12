@@ -3,7 +3,8 @@
     --orange-color: #DA661A;
     --pink-color: #e26c59;
     --green-color: #343d25;
-    --brown-color: #7e3b0f;
+    --light-green-color: #485435;
+    --brown-color: #69330f;
     --heading-font: 'Buenard', serif;
 }
 
@@ -79,6 +80,12 @@
     background-color: var(--pink-color);
     color: var(--beige-color); 
     border: 2px solid var(--pink-color);
+}
+
+.btn.secondary {
+    background-color: var(--light-green-color);
+    color: var(--beige-color); 
+    border: 2px solid var(--light-green-color);
 }
 
 /* Circular Icon Styling */
@@ -157,7 +164,7 @@
 .line {
     flex: 1; 
     height: 4px;
-    background-color: var(--brown-color); 
+    background-color: var(--green-color); 
 }
 
 footer {
