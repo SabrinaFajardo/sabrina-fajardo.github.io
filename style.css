@@ -88,24 +88,22 @@
     border: 2px solid var(--light-green-color);
 }
 
-/* Circular Icon Styling */
 .icon-circle {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* This forces a perfect square into a circle */
+    border-radius: 50%; 
     border: 2px solid var(--beige-color);
     color: var(--beige-color);
-    transition: all 0.3s ease; /* Smooth animation when hovering */
+    transition: all 0.3s ease; 
 }
 
-/* Hover Effect: Inverts the colors so the circle fills with beige and the icon turns green */
 .icon-circle:hover {
     background-color: var(--beige-color);
     color: var(--green-color);
-    transform: translateY(-3px); /* Makes the button subtly pop up when hovered */
+    transform: translateY(-3px); 
 }
 
 .split-layout {
@@ -169,13 +167,13 @@
 
 footer {
     display: flex;
-    justify-content: space-between; /* Pushes text left, icons right */
-    align-items: center; /* Vertically centers the icons with the text */
+    justify-content: space-between; 
+    align-items: center; 
     padding: 60px 5%;
     margin-top: 80px;
     background-color: var(--green-color); 
     color: var(--beige-color); 
-    text-align: left; /* Aligns the paragraph text nicely on the left */
+    text-align: left; 
 }
 
 footer h2 {
@@ -187,10 +185,9 @@ footer h2 {
 .social-links {
     display: flex;
     gap: 24px;
-    /* Removed the top margin since they are now side-by-side with the text */
+    
 }
 
-/* Mobile Responsiveness: Stacks the footer cleanly on phones */
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
@@ -199,10 +196,9 @@ footer h2 {
     }
 }
 
-/* Responsive 16:9 YouTube Embed Container */
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* Forces a 16:9 aspect ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     border-radius: 8px;
