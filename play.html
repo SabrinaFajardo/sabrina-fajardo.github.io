@@ -23,7 +23,7 @@
             <a href="play.html" class="btn primary">Play</a>
         </div>
     </header>
-</body>
+
 
 <main>
     <div class="split-layout">
@@ -46,7 +46,7 @@
         <div class="line"></div>
     </div>
 
-    <div class="split-layout">
+    <div class="split-layout hidden-right">
         <div class="photo-box photo-small">
             <img src="Knight2.gif" alt="Game Concept Ideation" style="margin-bottom: 45px; width: 60%">
             <img src="SpiderBig.gif" alt="Game Concept Ideation" style="width: 60%">
@@ -89,3 +89,22 @@
         </a>
     </div>
 </footer>
+
+<script>
+  const observerOptions = {
+    threshold: 0.3 
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-scroll');
+      }
+    });
+  }, observerOptions);
+
+  const hiddenElements = document.querySelectorAll('.hidden-right, .hidden-left');
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>
+
+</body>

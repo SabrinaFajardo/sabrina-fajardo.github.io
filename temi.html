@@ -41,10 +41,10 @@
             <div class="line"></div>
         </div>
 
-        <div class="split-layout">
+        <div class="split-layout hidden-right">
             <div class="photo-box">
-                <img src="TemiFaceBefore.png" alt="Before of Temi's Face">
-                <img src="TemiFaceAfter.png" alt="After of Temi's Face">
+                <img src="TemiFaceBefore.png" alt="Before of Temi's Face" style="max-width: 400px; justify-content: center; align-items: center;">
+                <img src="TemiFaceAfter.png" alt="After of Temi's Face" style="max-width: 400px; justify-content: center; align-items: center;">
             </div>
             <div class="text-box">
                 <h2>Anthropomorphic Refinements</h2>
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class="split-layout">
+        <div class="split-layout hidden-left">
             <div class="text-box">
                 <h2>Reducing Cognitive Load</h2>
                 <p>The original Smart Goals screen suffered from low contrast and visual clutter. I implemented a darker background to build high contrast, clearly separating the background from Temi as an entity. By centering Temi alongside the goals, the visual hierarchy clearly establishes that Temi is the one explaining the concepts.</p>
@@ -68,7 +68,6 @@
                 <a href="javascript:history.back()" class="btn primary">Back</a>
         </div>
     </main>
-</body>
 
 <footer id="contact">
     <div class="footer-text">
@@ -97,3 +96,22 @@
         </a>
     </div>
 </footer>
+
+<script>
+  const observerOptions = {
+    threshold: 0.3 
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-scroll');
+      }
+    });
+  }, observerOptions);
+
+  const hiddenElements = document.querySelectorAll('.hidden-right, .hidden-left');
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>
+
+</body>

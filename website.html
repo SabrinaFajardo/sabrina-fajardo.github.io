@@ -42,7 +42,7 @@
             <div class="line"></div>
         </div>
 
-        <div class="split-layout">
+        <div class="split-layout hidden-left">
             <div class="photo-box">
                 <img src="CodeCrop.png" alt="Code snippet or architectural layout">
             </div>
@@ -53,7 +53,7 @@
             </div>
         </div>
 
-        <div class="split-layout">
+        <div class="split-layout hidden-right">
             <div class="text-box">
                 <h2>Designing for the Brain</h2>
                 <p>Every aesthetic decision was filtered through a UX and cognitive psychology lens. I specifically chose a high-contrast dark green and beige color palette to reduce screen glare and eye strain compared to a stark white background.</p>
@@ -98,5 +98,23 @@
     </div>
 </footer>
 
+<script>
+  const observerOptions = {
+    threshold: 0.3 
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-scroll');
+      }
+    });
+  }, observerOptions);
+
+  const splitLayouts = document.querySelectorAll('.split-layout');
+  splitLayouts.forEach((layout) => {
+    observer.observe(layout);
+  });
+</script>
 </body>
 </html>

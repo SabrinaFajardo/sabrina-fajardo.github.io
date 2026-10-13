@@ -41,7 +41,7 @@
         </div>
 
         <header> <h2> Featured Work</h2></header>
-        <div class="split-layout" style="margin-top: 0px; margin-bottom: 70px;">
+        <div class="split-layout hidden-right" style="margin-top: 0px; margin-bottom: 70px;">
             <div class="text-box">
                 <h2>HRI Lab Interface Redesign</h2>
                 <p>An exploration into how I utilized my psychology and arts background to redesign HTML face animations, creating a more comfortable and clear user experience during a human-robot interaction study.</p>
@@ -53,7 +53,7 @@
             </div>
         </div>
 
-        <div class="split-layout">
+        <div class="split-layout hidden-left">
             <div class="photo-box">
                 <img src="Wireframe.png" alt="Wireframes of this portfolio">
             </div>
@@ -93,6 +93,23 @@
         </a>
     </div>
 </footer>
+
+<script>
+  const observerOptions = {
+    threshold: 0.3 
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-scroll');
+      }
+    });
+  }, observerOptions);
+
+  const hiddenElements = document.querySelectorAll('.hidden-right, .hidden-left');
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>
 
 </body>
 </html>
